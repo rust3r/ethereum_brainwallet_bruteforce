@@ -86,7 +86,7 @@ func CheckBalance(passwords chan string, client *ethclient.Client) {
 		}
 
 		if balance.Cmp(big.NewInt(0)) != 0 {
-			data := creds + "\n"
+			data := password + ":" + creds + ":" + balance.String() + "\n"
 			WriteToFound(data, "found.txt")
 		}
 		fmt.Println(creds, balance)
