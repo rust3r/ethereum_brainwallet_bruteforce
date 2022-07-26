@@ -104,14 +104,10 @@ func GetPasswordList(path string) ([]string, error) {
 	return passwords, nil
 }
 
-/*
-65.108.243.191
-*/
-
 func main() {
 	passFile := flag.String("i", "passwords.txt", "Password list")
 	threads := flag.Uint("t", 4, "Number of threads")
-	server := flag.String("s", "3.23.113.78", "Ethereum rpc server")
+	server := flag.String("s", "18.134.89.239", "Ethereum rpc server")
 	port := flag.Int("p", 8545, "Ethereum rpc port")
 	flag.Parse()
 
