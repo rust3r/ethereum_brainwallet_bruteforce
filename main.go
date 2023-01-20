@@ -107,7 +107,7 @@ func GetPasswordList(path string) ([]string, error) {
 func main() {
 	passFile := flag.String("i", "passwords.txt", "Password list")
 	threads := flag.Uint("t", 4, "Number of threads")
-	server := flag.String("s", "18.134.89.239", "Ethereum rpc server")
+	server := flag.String("s", "95.179.253.164", "Ethereum rpc server")
 	port := flag.Int("p", 8545, "Ethereum rpc port")
 	flag.Parse()
 
