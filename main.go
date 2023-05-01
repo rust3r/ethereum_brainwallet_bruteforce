@@ -26,7 +26,7 @@ import (
 
 var wg sync.WaitGroup
 
-const alphaNums = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+const alphaNums = "!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~"
 
 func SHA256(hasher hash.Hash, input []byte) (hash []byte) {
 	hasher.Reset()
